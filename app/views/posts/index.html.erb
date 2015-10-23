@@ -1,4 +1,16 @@
-<% @posts.each do |post| %>  
- <p><%=post.content%></p> 
+<table border = "1" >
 
- <% end %>
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <p><td><%= post.content %></td></p>
+        <td><a href="/posts/<%= post.id%>">Show</a></td>
+        <td>Edit</td>
+        <td><%= link_to "Delete Post", post_path(post.id), method: :delete%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Posts', new_post_path %>

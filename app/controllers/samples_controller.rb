@@ -10,6 +10,7 @@ class SamplesController < ApplicationController
   # GET /samples/1
   # GET /samples/1.json
   def show
+    
   end
 
   # GET /samples/new
@@ -54,6 +55,7 @@ class SamplesController < ApplicationController
   # DELETE /samples/1
   # DELETE /samples/1.json
   def destroy
+    @sample = Sample.find(params[:id])
     @sample.destroy
     respond_to do |format|
       format.html { redirect_to samples_url, notice: 'Sample was successfully destroyed.' }

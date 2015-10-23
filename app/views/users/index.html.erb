@@ -1,3 +1,18 @@
-<% @users.each do |user| %>  
- <%=user.fname%> 
- <% end %>
+<h1>This is the list of Users in the Database</h1>
+ <br>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.fname %></td>
+        <td><%= user.lname %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td> 
+        <td><%= link_to 'Destroy User', user, method: :delete %></td>
+        <br>
+      </tr>
+    <% end %>
+  </tbody>
+<br>
+  <%= link_to 'Create User', new_user_path %>
