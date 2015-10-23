@@ -1,7 +1,7 @@
 <p>
-	<%=@user.fname %>
+	<%= @user.inspect %>
 </p>
-
 <p>
    <%= @post.content %>
 </p>
+<%= link_to 'Back', posts_path %>

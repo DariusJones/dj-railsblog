@@ -20,6 +20,7 @@ class SamplesController < ApplicationController
 
   # GET /samples/1/edit
   def edit
+    
   end
 
   # POST /samples

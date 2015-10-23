@@ -1,3 +1,5 @@
+<h1>This is the list of all the post</h1>
+
 <table border = "1" >
 
   <tbody>
@@ -5,7 +7,7 @@
       <tr>
         <p><td><%= post.content %></td></p>
         <td><a href="/posts/<%= post.id%>">Show</a></td>
-        <td>Edit</td>
+        <td><%= link_to "Edit", edit_post_path(post)%></td>
         <td><%= link_to "Delete Post", post_path(post.id), method: :delete%></td>
       </tr>
     <% end %>
